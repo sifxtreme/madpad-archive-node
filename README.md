@@ -1,4 +1,10 @@
 madpad-node
 ===========
 
-Create an editable pad similar to (Madpad)[https://github.com/sifxtreme/madpad] but this time with Node / Express
+Create an editable pad that can be accessed easily from any computer.
+
+This is similar to [Madpad](https://github.com/sifxtreme/madpad) but this time written with Node / Express instead of Rails.
+
+Go to [madpad.heroku.com](http://madpad.heroku.com) to try it out
+
+This uses [Firebase](https://www.firebase.com/) to synchronize the textarea in real time.
