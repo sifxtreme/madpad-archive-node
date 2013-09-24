@@ -1,10 +1,11 @@
 {
   "name": "MadPad",
   "description": "Pad Application",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "dependencies": {
     "express": "3.1.x",
-    "hbs":"*"
+    "hbs":"*",
+    "randomstring":"*"
   },
   "engines": {
     "node": "0.10.x",
