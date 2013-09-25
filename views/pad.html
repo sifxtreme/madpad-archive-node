@@ -1,13 +1,55 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
+			<button id="passwordProtect" class="btn btn-purple" href="#passwordModal">Password Protect</button>
 			<textarea class="main" placeholder="Enter text here" id="content"></textarea>
 		</div>
 	</div>
-</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	      <h4 class="modal-title">Password Protect</h4>
+	    </div>
+	    <div class="formWrapper">
+	    <form id="passwordSubmit" method="post">
+	    <div class="modal-body">
+	    	<div class="row">
+					<label class="col-md-6 col-xs-12">Password</label>
+					<input id="password" class="col-md-6 col-xs-12" type="password" name="password">
+				</div>
+				<div class="row">
+					<label class="col-md-6 col-xs-12">Confirm Password</label>
+					<input id="password_confirm" class="col-md-6 col-xs-12" type="password" name="password_confirm">
+				</div>
+				<input id="csrf" type="hidden" name="_csrf" value="{{token}}">
+			</div>
+	    <div class="modal-footer">
+	      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      <input type="submit" class="btn btn-purple" value="Submit Password">
+	    </div>
+			</form>
+			</div>
+	  </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 
 <script type="text/javascript">
 $(document).ready(function(){
+	$('#passwordProtect').on('click', function(){
+		$('#passwordModal').modal();
+	})
+	$('#passwordSubmit').submit(function(){
+		$.post("",{})
+		console.log($('#passwordSubmit').serializeObject());
+		return false;
+	})
 	$(document).delegate('textarea', 'keydown', function(e) {
 		var keyCode = e.keyCode || e.which;
 		if (keyCode == 9) {
@@ -27,21 +69,22 @@ $(document).ready(function(){
 	});
 
 	// check for value in firebase db
-	var myDataRef = new Firebase('https://padder.firebaseio.com/url/{{id}}');
-	myDataRef.on('value', function(snapshot){
-		if(snapshot.val() == null){
-			myDataRef.child('content').set('');
-		}
-		else{
-			$('textarea').val(snapshot.val().content);
-		}
-	})
 
-	// update value
-	$('textarea').keyup(function() {
-		var content = $('#content').val();
-		myDataRef.update({content: content});
-	});
+	// var myDataRef = new Firebase('https://padder.firebaseio.com/url/{{id}}');
+	// myDataRef.on('value', function(snapshot){
+	// 	if(snapshot.val() == null){
+	// 		myDataRef.child('content').set('');
+	// 	}
+	// 	else{
+	// 		$('textarea').val(snapshot.val().content);
+	// 	}
+	// })
+
+	// // update value
+	// $('textarea').keyup(function() {
+	// 	var content = $('#content').val();
+	// 	myDataRef.update({content: content});
+	// });
 
 })
 </script>

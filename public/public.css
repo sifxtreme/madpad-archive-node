@@ -43,3 +43,25 @@ body{
 		margin-top: 35px;
 	}
 }
+.btn-purple{
+	background-color: #463265;
+	color: #ddd;
+}
+.btn-purple:hover{
+	color: #fff;
+}
+#passwordProtect{
+	position: absolute;
+	top: 26px;
+	right: 16px;
+}
+.modal-title{
+	color: #222;
+	text-align: center;
+}
+label{
+	color: #444;
+}
+.modal-body .row{
+	margin: 10px;
+}
