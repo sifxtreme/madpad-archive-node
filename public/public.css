@@ -7,7 +7,7 @@ body{
 	font-size: 20px;
 }
 .main{
-	margin-top: 25px;
+	margin-top: 40px;
 	border-radius: 4px;
 	padding: 15px;
 	width: 100%;
@@ -42,4 +42,26 @@ body{
 	.info{
 		margin-top: 35px;
 	}
+}
+.btn-purple{
+	background-color: #463265;
+	color: #ddd;
+}
+.btn-purple:hover{
+	color: #fff;
+}
+#blog-button{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.twitter-share-button{
+	position: absolute;
+	top: 41px;
+	right: 16px;
+}
+.main .twitter-share-button{
+	position: absolute;
+	top: 1px;
+	right: 1px;
 }
