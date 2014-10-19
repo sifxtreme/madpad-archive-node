@@ -7,28 +7,26 @@
 	<meta name="description" content="Create a shareable realtime updating notepad that can be shared and accessed easily! It is a quick way to save text.">
   <link rel="author" href="https://plus.google.com/u/0/111879146383442888270">
   <meta property="og:title" content="MadPad: Realtime Notepad">
-  <meta property="og:image" content="/Madpad.png">
+  <meta property="og:image" content="/madpad.png">
   <meta property="og:description" content="Create a shareable realtime updating notepad with an easy to remember URL. It can be shared and accessed easily. It is a quick way to save text.">
   <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/public/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
   <link rel="stylesheet" href="/public/public.css" type="text/css">
   <script type="text/javascript">
+    // var _gaq = _gaq || [];
+    // _gaq.push(['_setAccount', 'UA-44257324-1']);
+    // _gaq.push(['_trackPageview']);
 
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-44257324-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
+    // (function() {
+    //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    // })();
   </script>
   
 </head>
@@ -37,6 +35,9 @@
 
   {{{body}}}
 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+  <script type='text/javascript' src='/concurrent.js'></script>
   <script type="text/javascript">
     $('.main').height($(window).height() - 80);
   </script>
